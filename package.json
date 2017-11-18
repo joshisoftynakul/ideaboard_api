@@ -1,12 +1,16 @@
-
 {
   "name": "ideaboard",
   "engines": {
-    "node": "6.3.1"
+    "node": "8.9.1"
   },
   "scripts": {
     "build": "cd ideaboard_client && npm install && npm run build && cd ..",
     "deploy": "cp -a ideaboard_client/build/. public/",
     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "immutability-helper": "^2.5.0",
+    "react-addons-css-transition-group": "^15.6.2"
   }
 }
